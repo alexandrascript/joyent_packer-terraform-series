@@ -1,0 +1,41 @@
+[{
+  "id": 1,
+  "quote": "A lot of people failed at what you accomplished, simply because they were busy finding problems while you were busy finding solutions. Thank you.", 
+  "image": "/resources/images/1-spongebob.gif"
+}, {
+  "id": 2,
+  "quote": "Even the smallest of jobs well done will take you one step closer towards the success that you have always dreamed about. Keep it up.",
+  "image": "/resources/images/2-kenneth.gif"
+}, {
+  "id": 3,
+  "quote": "I see you. I appreciate you. You matter.",
+  "image": "/resources/images/3-bobby.gif"
+}, {
+  "id": 4,
+  "quote": "No one could do a better job than the job you do.",
+  "image": "/resources/images/5-adele.gif"
+}, {
+  "id": 5,
+  "quote": "If Oscars were given for a job well done, I’d nominate you.",
+  "image": "/resources/images/4-batman.gif"
+}, {
+  "id": 6,
+  "quote": "I am proud of you.",
+  "image": "/resources/images/6-bb8.gif"
+}, {
+  "id": 7,
+  "quote": "I don't know what I'd do without you.",
+  "image": "/resources/images/7-michelleobama.gif"
+}, {
+  "id": 8,
+  "quote": "You're the kind of person who the cool people look up to.",
+  "image": "/resources/images/8-cedric.gif"
+}, {
+  "id": 9,
+  "quote": "You knock me off my feet.",
+  "image": "/resources/images/10-lost.gif"
+}, {
+  "id": 10,
+  "quote": "You continuously make my day, my week, my month better.",
+  "image": "/resources/images/9-shalita.gif"
+}]

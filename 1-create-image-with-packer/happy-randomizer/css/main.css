@@ -1,0 +1,45 @@
+* {margin:0; padding:0; font-family: 'Raleway', Helvetica, sans-serif;}
+body {
+	background: #FEFCFB; color:#0A1128;
+}
+h1,h2,h3,h4 {color: #034078; line-height: 1.3em; font-family: 'Monoton', cursive;}
+img {width: 100%; height: auto;}
+header {
+	margin: 0 auto; width: 100%; padding:2em 0; text-align: center;
+}
+header h1 {font-size: 3em;}
+footer {
+	text-align: center; padding: 2em 0 0.5em 0; width: 100%;
+}
+blockquote {margin:1em auto;}
+blockquote.stylish {
+  padding: 10px 0 0 20px;
+  /*background-image: url(/resources/images/quote.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 50px;*/
+  min-height: 50px;
+  display: inline-block;
+}
+blockquote.stylish span {
+	display: block;
+}
+footer p {font-size: 0.8em;}
+#shareit, .loading {
+	margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+	text-align: center;
+	padding:1em;
+}
+#shareit img {max-width: 500px;}
+#shareit button {
+	background:#1282A2; border: none; color:#FEFCFB; font-size: 1.2em; padding:10px; margin:0 auto 1em; text-transform: uppercase; display: block;
+}
+#shareit button:hover {background: #034078;}
+#image {
+	background-image: url(/resources/images/loading.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 60px;
+}
