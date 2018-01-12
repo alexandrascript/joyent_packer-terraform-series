@@ -106,6 +106,14 @@ module "east" {
   green_package_name  = "${var.green_package_name}"
 }
 
+output "east_datacenter_green_ips" {
+  value = ["${module.east.green_ips}"]
+}
+
+output "east_datacenter_blue_ips" {
+  value = ["${module.east.blue_ips}"]
+}
+
 module "sw" {
   source      = "./modules/service"
   region_name = "us-sw-1"
@@ -127,6 +135,14 @@ module "sw" {
   green_package_name  = "${var.green_package_name}"
 }
 
+output "sw_datacenter_green_ips" {
+  value = ["${module.sw.green_ips}"]
+}
+
+output "sw_datacenter_blue_ips" {
+  value = ["${module.sw.blue_ips}"]
+}
+
 module "west" {
   source      = "./modules/service"
   region_name = "us-west-1"
@@ -146,6 +162,14 @@ module "west" {
   green_image_type    = "${var.green_image_type}"
   green_image_version = "${var.green_image_version}"
   green_package_name  = "${var.green_package_name}"
+}
+
+output "west_datacenter_green_ips" {
+  value = ["${module.west.green_ips}"]
+}
+
+output "west_datacenter_blue_ips" {
+  value = ["${module.west.blue_ips}"]
 }
 
 #
