@@ -18,11 +18,6 @@ variable "ttl" {
   description = "TTL for the DNS record."
 }
 
-variable "zone_id" {
-  type        = "string"
-  description = ""
-}
-
 variable "service_instance_list" {
   type = "list"
 }
@@ -40,11 +35,11 @@ variable "staging_service_instance_count" {
 }
 
 variable "CF_USER" {
-  type        = "string"
+  type = "string"
 }
 
 variable "CF_GLOBAL_API_KEY" {
-  type        = "string"
+  type = "string"
 }
 
 provider "cloudflare" {

@@ -83,7 +83,7 @@ data "triton_image" "blue_image" {
 
 resource "triton_machine" "blue_machine" {
   count    = "${var.blue_count}"
-  name     = "blue_happy_${count.index + 1}"
+  name     = "${format("happy-%02d-blue", count.index + 1)}"
   package  = "${var.blue_package_name}"
   image    = "${data.triton_image.blue_image.id}"
   networks = ["${data.triton_network.service_networks.*.id}"]
@@ -105,7 +105,7 @@ data "triton_image" "green_image" {
 
 resource "triton_machine" "green_machine" {
   count    = "${var.green_count}"
-  name     = "green_happy_${count.index + 1}"
+  name     = "${format("happy-%02d-green", count.index + 1)}"
   package  = "${var.green_package_name}"
   image    = "${data.triton_image.green_image.id}"
   networks = ["${data.triton_network.service_networks.*.id}"]
@@ -115,6 +115,9 @@ resource "triton_machine" "green_machine" {
   }
 }
 
+#
+# Outputs for all deployments
+#
 output "blue_ips" {
   value = ["${triton_machine.blue_machine.*.primaryip}"]
 }
