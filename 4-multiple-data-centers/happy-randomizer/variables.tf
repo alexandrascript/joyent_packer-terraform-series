@@ -72,14 +72,24 @@ variable "green_package_name" {
 
 #
 # Details for our DNS provider
+# Uncomment the defaults if not saved in environment variables
 #
-variable "cloudflare_token" {
+variable "CF_USER" {
+  type        = "string"
+  description = "Username or email address associated with Cloudflare"
+  # default     = "<user@example.com>"
+}
+
+variable "CF_GLOBAL_API_KEY" {
   type        = "string"
   description = "Key for using the Cloudflare API."
+  # default     = "<API KEY>"
 }
-variable "cloudflare_zone_token" {
+
+variable "CF_DOMAIN_API_KEY" {
   type        = "string"
   description = "Key for using the Cloudflare Zone."
+  # default     = "<API KEY>"
 }
 
 #
@@ -179,7 +189,7 @@ module "dns" {
   source = "./modules/dns"
 
   zone_name         = "alexandra.space"
-  zone_id           = "${var.cloudflare_zone_token}"
+  zone_id           = "${var.CF_DOMAIN_API_KEY}"
   host_name         = "@"
   staging_host_name = "staging"
   ttl               = "300"
