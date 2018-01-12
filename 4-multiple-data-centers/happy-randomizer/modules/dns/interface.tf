@@ -37,12 +37,12 @@ variable "staging_service_instance_count" {
 variable "email" {
   type = "string"
 }
+
 variable "token" {
   type = "string"
 }
 
-provider "cloudflare" {
-}
+provider "cloudflare" {}
 
 resource "cloudflare_record" "production" {
   count  = "${var.service_instance_count}"
