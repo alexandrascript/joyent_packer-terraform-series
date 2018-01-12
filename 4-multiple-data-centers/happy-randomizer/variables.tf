@@ -84,11 +84,6 @@ variable "cf_global_api_key" {
   description = "Key for using the Cloudflare API."
 }
 
-variable "cf_domain_api_key" {
-  type        = "string"
-  description = "Key for using the Cloudflare Zone."
-}
-
 #
 # Details about the deployments for each data center
 #
@@ -186,7 +181,6 @@ module "dns" {
   source = "./modules/dns"
 
   zone_name         = "alexandra.space"
-  zone_id           = "${var.cf_domain_api_key}"
   host_name         = "@"
   staging_host_name = "staging"
   ttl               = "300"
