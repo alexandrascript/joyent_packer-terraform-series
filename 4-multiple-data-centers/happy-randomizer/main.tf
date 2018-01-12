@@ -99,9 +99,6 @@ module "dns" {
   staging_host_name = "staging"
   ttl               = "300"
 
-  email = "{var.email}"
-  token = "{var.token}"
-
   service_instance_count = "${module.east.blue_count + module.sw.blue_count + module.west.blue_count}"
   service_instance_list  = "${concat(module.east.blue_ips, module.sw.blue_ips, module.west.blue_ips)}"
 
