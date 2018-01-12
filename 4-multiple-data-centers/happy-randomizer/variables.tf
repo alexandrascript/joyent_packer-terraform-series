@@ -99,7 +99,7 @@ module "east" {
   source      = "./modules/service"
   region_name = "us-east-1"
 
-  blue_count  = 1
+  blue_count  = 3
   green_count = 3
 
   service_production = "${var.service_production}"
@@ -157,8 +157,8 @@ module "west" {
   source      = "./modules/service"
   region_name = "us-west-1"
 
-  blue_count  = 1
-  green_count = 3
+  blue_count  = 3
+  green_count = 0
 
   service_production = "${var.service_production}"
   service_name       = "${var.service_name}"
