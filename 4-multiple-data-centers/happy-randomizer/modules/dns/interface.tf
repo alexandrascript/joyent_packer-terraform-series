@@ -34,17 +34,14 @@ variable "staging_service_instance_count" {
   type = "string"
 }
 
-variable "cf_user" {
+variable "email" {
   type = "string"
 }
-
-variable "cf_global_api_key" {
+variable "token" {
   type = "string"
 }
 
 provider "cloudflare" {
-  email = "${var.cf_user}"
-  token = "${var.cf_global_api_key}"
 }
 
 resource "cloudflare_record" "production" {
