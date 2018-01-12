@@ -76,7 +76,7 @@ variable "green_package_name" {
 #
 variable "cf_user" {
   type        = "string"
-  description = "Username or email address associated with Cloudflare"
+  description = "Email address associated with Cloudflare"
 }
 
 variable "cf_global_api_key" {
