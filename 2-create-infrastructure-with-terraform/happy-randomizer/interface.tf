@@ -3,18 +3,10 @@ terraform {
 }
 
 provider "triton" {
-    # Commenting these out because they will take the SDC_URL, SDC_ACCOUNT, and SDC_KEY_ID env vars as defaults
-    # url = "https://${var.dc_name}.api.joyent.com"
+    # Commenting these out because they will take the TRITON_URL, TRITON_ACCOUNT, and TRITON_KEY_ID env vars as defaults
+    # url = "${var.triton_url}"
     # account = "${var.triton_account}"
     # key_id = "${var.triton_key_id}"
-}
-
-#
-# Details about all deployments of this application
-#
-data "triton_network" "service_networks" {
-  count = "${length(var.service_networks)}"
-  name = "${element(var.service_networks, count.index)}"
 }
 
 #
@@ -25,6 +17,11 @@ data "triton_image" "happy_image" {
     version = "${var.image_version}"
     type = "lx-dataset"
     most_recent = true
+}
+
+data "triton_network" "service_networks" {
+  count = "${length(var.service_networks)}"
+  name = "${element(var.service_networks, count.index)}"
 }
 
 resource "triton_machine" "happy_machine" {
