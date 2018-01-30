@@ -12,7 +12,7 @@ provider "triton" {
 data "triton_image" "happy_image" {
   name        = "${var.image_name}"
   version     = "${var.image_version}"
-  type        = "lx-dataset"
+  type        = "${var.image_type}"
   most_recent = true
 }
 

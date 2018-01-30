@@ -16,6 +16,12 @@ variable "image_version" {
   default     = "1.0.0"
 }
 
+variable "image_type" {
+  type        = "string"
+  description = "The type of the image for the deployment."
+  default     = "lx-dataset"
+}
+
 variable "package_name" {
   type        = "string"
   description = "The package to use when making a deployment."
