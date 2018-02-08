@@ -1,0 +1,180 @@
+{
+ "variables": {
+    "triton_dc_east1": "us-east-1",
+    "triton_dc_east2": "us-east-2",
+    "triton_dc_east3": "us-east-3",
+    "triton_dc_east3b": "us-east-3b",
+    "triton_dc_sw1": "us-sw-1",
+    "triton_dc_west1": "us-west-1",
+    "triton_dc_eu1": "eu-ams-1",
+    "triton_url": "{{env `SDC_URL`}}",
+    "triton_account": "{{env `SDC_ACCOUNT`}}",
+    "triton_key_id": "{{env `SDC_KEY_ID`}}"
+  },
+  "builders": [
+      {
+         "name": "{{user `triton_dc_east1`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_east1`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+            "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_east2`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_east2`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_east3`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_east3`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_east3b`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_east3b`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_sw1`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_sw1`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_west1`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_west1`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      },
+      {
+         "name": "{{user `triton_dc_eu1`}}",
+         "type": "triton",
+         "triton_url": "https://{{user `triton_dc_eu1`}}.api.joyent.com",
+         "triton_account": "{{user `triton_account`}}",
+         "triton_key_id": "{{user `triton_key_id`}}",
+         
+         "ssh_username": "root",
+         
+         "source_machine_name": "nginx",
+         "source_machine_package": "g4-highcpu-128M",
+         "source_machine_image": "88cf77e4-1958-11e7-bda8-777cc817ade5",
+         
+         "image_name": "happy_randomizer",
+         "image_version": "1.0.0",
+         "image_tags": {
+             "Project": "Happy-Randomizer"
+         }
+      }
+  ],
+  "provisioners": [
+      {
+         "type": "shell",
+         "script": "directories.sh"
+      },
+      {
+         "type": "file",
+         "source": "favicon.ico",
+         "destination": "/usr/share/nginx/html/"
+      },
+      {
+         "type": "file",
+         "source": "index.html",
+         "destination": "/usr/share/nginx/html/"
+      },
+   	{
+      	"type": "file",
+      	"source": "css/",
+      	"destination": "/usr/share/nginx/html/css/"
+      },
+      {
+         "type": "file",
+         "source": "js/",
+         "destination": "/usr/share/nginx/html/js/"
+      },
+      {
+         "type": "file",
+         "source": "resources/",
+         "destination": "/usr/share/nginx/html/resources/"
+      }
+   ]
+}
