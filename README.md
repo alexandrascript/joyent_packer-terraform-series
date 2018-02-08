@@ -17,7 +17,7 @@ $ eval "$(triton env)"
 
 ## Blog series
 
-+ [Create images with Packer](https://www.joyent.com/blog/create-images-with-packer)
++ [Create images with Packer](https://www.joyent.com/blog/video-create-images-with-packer)
    + For the Happy Randomizer, there is an alternative JSON file, `thumbsup.json`, which uses only thumbs up GIFs. To create version 1.1 of this image, use that JSON file.
       + Edit `main.js` so that the url is equal to `./resources/thumbsup.json`.
       + Edit the Packer configuration to change the `image_version` to `1.1.0`.
@@ -25,7 +25,8 @@ $ eval "$(triton env)"
 + [Infrastructure management with Terraform](https://www.joyent.com/blog/simple-app-with-terraform)
 + [Blue-green deploys with Terraform](https://www.joyent.com/blog/blue-green-deploys-with-terraform)
    + You will need both version 1.0 and 1.1 of the Happy Randomizer
-+ Multi-data center deployment with Terraform &ndash; coming soon
++ [Multi-data center deployment with Terraform](https://www.joyent.com/blog/multiple-data-centers-with-terraform)
+   + You will need both version 1.0 and 1.1 of the Happy Randomizer on all of the data centers upon wish you want to deploy the application. 
 
 ## Troubleshooting
 
