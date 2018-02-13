@@ -3,7 +3,8 @@ terraform {
 }
 
 provider "triton" {
-  # Commenting these out because they will take the TRITON_URL, TRITON_ACCOUNT, and TRITON_KEY_ID env vars as defaults  # url = "${var.triton_url}"  # account = "${var.triton_account}"  # key_id = "${var.triton_key_id}"
+  # The provider takes the following environment variables:
+  # TRITON_URL, TRITON_ACCOUNT, and TRITON_KEY_ID
 }
 
 #
@@ -30,4 +31,12 @@ resource "triton_machine" "happy_machine" {
   cns {
     services = ["${var.service_name}"]
   }
+}
+
+output "primaryIp" {
+  value = ["${triton_machine.happy_machine.*.primaryip}"]
+}
+
+output "dns_names" {
+  value = ["${triton_machine.happy_machine.*.domain_names}"]
 }
