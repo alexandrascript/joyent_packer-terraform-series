@@ -1,10 +1,15 @@
+#
+# You must have installed Terraform v 0.10.0 or above.
+#
 terraform {
   required_version = ">= 0.10.0"
 }
 
-provider "triton" {
-  # Commenting these out because they will take the SDC_URL, SDC_ACCOUNT, and SDC_KEY_ID env vars as defaults  # url = "https://${var.dc_name}.api.joyent.com"  # account = "${var.triton_account}"  # key_id = "${var.triton_key_id}"
-}
+#
+# The provider uses TRITON_URL, TRITON_ACCOUNT, and TRITON_KEY_ID
+# environment vars as defaults.
+#
+provider "triton" {}
 
 #
 # Common details about both "blue" and "green" deployments
@@ -37,6 +42,17 @@ resource "triton_machine" "blue_machine" {
 }
 
 #
+# Outputs from the "blue" deployment
+#
+output "blue_ips" {
+  value = ["${triton_machine.blue_machine.*.primaryip}"]
+}
+
+output "blue_domains" {
+  value = ["${triton_machine.blue_machine.*.domain_names}"]
+}
+
+#
 # Details about the "green" deployment
 #
 data "triton_image" "green_image" {
@@ -58,15 +74,9 @@ resource "triton_machine" "green_machine" {
   }
 }
 
-
-output "blue_ips" {
-  value = ["${triton_machine.blue_machine.*.primaryip}"]
-}
-
-output "blue_domains" {
-  value = ["${triton_machine.blue_machine.*.domain_names}"]
-}
-
+#
+# Outputs from the "green" deployment
+#
 output "green_ips" {
   value = ["${triton_machine.green_machine.*.primaryip}"]
 }
