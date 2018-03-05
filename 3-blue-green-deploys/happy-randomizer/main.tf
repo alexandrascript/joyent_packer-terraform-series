@@ -57,3 +57,20 @@ resource "triton_machine" "green_machine" {
     services = ["${var.service_production == "green" ? var.service_name : "staging-${var.service_name}" }", "green-${var.service_name}"]
   }
 }
+
+
+output "blue_ips" {
+  value = ["${triton_machine.blue_machine.*.primaryip}"]
+}
+
+output "blue_domains" {
+  value = ["${triton_machine.blue_machine.*.domain_names}"]
+}
+
+output "green_ips" {
+  value = ["${triton_machine.green_machine.*.primaryip}"]
+}
+
+output "green_domains" {
+  value = ["${triton_machine.green_machine.*.domain_names}"]
+}
