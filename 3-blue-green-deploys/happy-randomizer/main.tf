@@ -44,10 +44,6 @@ resource "triton_machine" "blue_machine" {
 #
 # Outputs from the "blue" deployment
 #
-output "blue_ips" {
-  value = ["${triton_machine.blue_machine.*.primaryip}"]
-}
-
 output "blue_domains" {
   value = ["${triton_machine.blue_machine.*.domain_names}"]
 }
@@ -77,10 +73,6 @@ resource "triton_machine" "green_machine" {
 #
 # Outputs from the "green" deployment
 #
-output "green_ips" {
-  value = ["${triton_machine.green_machine.*.primaryip}"]
-}
-
 output "green_domains" {
   value = ["${triton_machine.green_machine.*.domain_names}"]
 }
